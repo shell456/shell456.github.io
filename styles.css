@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 筑紫;
+    src: url("方正fw筑紫古典l明朝 简.ttf");
+}
+@font-face {
+    font-family: 布丁;
+    src: url("华康布丁体简W12.ttc");
+}
+@font-face {
+    font-family: 方正粗黑;
+    src: url("方正粗黑宋简体.ttf");
+}
+@media (max-width: 768px) {
+    body section.自我介绍 {
+      width: 50%; /* 相对于父元素 */
+    }
+  }
