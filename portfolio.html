@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁茗清的作品集</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <style>
+        
+
+        .portfolio-section {
+            padding: 40px;
+            background-color: #fef8f3;
+            margin: px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-section h2 {
+            font-size: 28px;
+            color: #3a6049;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-section p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #3a6049;
+        }
+
+        .pdf-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pdf-container iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YMQ</div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a target="_blank" href="https://blog.csdn.net/ohnoooo9">Blog</a></li>
+                <li><a href="video.html">Video</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <section class="portfolio-section">
+        <h2>我的作品集</h2>
+        <p>这里是我在各个项目中的作品集，包含了我所有的设计成果。</p>
+        <div class="pdf-container">
+            <iframe src="works.pdf" title="PDF作品集"></iframe>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        });
+        
+    </script>
+</body>
+</html>
