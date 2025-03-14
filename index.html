@@ -1,149 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁茗清的个人网页</title>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">YMQ</div>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a target="_blank" href="https://blog.csdn.net/ohnoooo9">Blog</a></li>
+                <li><a href="video.html">Video</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
 
-    <style>
-        
-        header{
-            background-color: white;
-            margin:0;
-            padding: 0;
+    <section class="introduction-section">
+        <div class="text-container">
+            <p>HELLO！</p>
+            <p>I'm Yuan MingQing.</p>
+        </div>
+        <div class="image-container">
+            <img src="touxiang2.png" alt="简笔画头像">
+        </div>
+    </section>
 
-        }
-       
-        
-        header{
-           
-            margin:0;
-            padding: 0;
-
-        }
-        nav {
-            background-color:rgb(234, 206, 182);
-            margin:0;
-            padding: 0;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        nav ul{
-            margin-left: 100px;
-        }
-        nav li{
-            display: inline-block;
-            font-family: 筑紫;
-            color:rgb(58, 96, 73);
-            font-size: 20px;
-            margin:20px;
-
-        }
-        body{
-            margin:0;
-            padding: 0;
-            background-color: rgb(242, 238, 219);
-        }
-        
-        body section.自我介绍 {
-            background-color: rgb(242, 238, 219);
-            height: 620px;
-            display: flex;
-            color:rgb(58, 96, 73);
-            font-family: 方正粗黑;
-            font-size:50px;
-            margin: 0;
-            padding: 0;
-            
-        }
-        body section.自我介绍 img{
-            width: 400px;
-            margin-top: 30px;
-            margin-left: 100px;
-        }
-        body section.自我介绍 div {
-            margin: 70px;
-            margin-left: 150px;
-            margin-right: 200px;
-        }
-        body section.两个视频{
-            background-color: rgb(217, 229, 219);
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        body section.两个视频 div{
-            margin-top: 50px;
-            margin-bottom: 50px;
-            margin-left: 250px;
-
-            text-align: center
-        }
-        body section.两个视频 img{
-            width: 350px;
-            outline-style:  outset;
-            outline-color: rgb(58, 96, 73);
-        }
-        body h2.视频{
-            background-color: rgb(217, 229, 219);
-            font-family:筑紫;
-            margin:0;
-            padding: 0;
-            background-color: rgb(217, 229, 219);
-        }
-        body h2.视频 p{
-            margin:0;
-            padding: 30px;
-            margin-left: 120px;
-        }
-        footer p{
-            height: 50px;
-            margin: 0;
-            padding: 0;
-            background-color:rgb(213, 213, 213) ;
-            text-align: center;
-            color: grey;
-        }
-    </style>
-    <font-face></font-face>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><strong>Home</strong></li>
-                    <li><strong>Resume</strong></li>
-                    <li><strong>Portfolio</strong></li>
-                    <li><strong>Blog</strong></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="自我介绍">
-            <div>
-                <p>你好！我是袁茗清。</p>
-                <p>正在求职中。</p>
-                <p>看看我捏~</p>
-            </div>
-            <section class="我的头像">
-                <img src="touxiang2.png" alt="简笔画头像">
-            </section>
-        </section>
-        <h2 class="视频">
-            <p>我的视频</p>
-        </h2>
-        <section class="两个视频">
-            <div>
-                <a href="https://b23.tv/qhr1Vuu" target="_blank"><img src="视频1.jpg" alt="comandante-牛郎">
-                    <p>comandante漫才翻译-牛郎</p></a>
-            </div>
-            <div><a href="https://b23.tv/GtJHkkX" target="_blank"><img src="视频2.jpg" alt="个人简历的图标">
-                <p>comandante漫才翻译-方便面</p></a>
-            </div>
-        
-        </section>
-        <footer>
-            <p>菜单栏在上面~</p>
-        </footer>
-        
-    </body>
-
-
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
 </html>
