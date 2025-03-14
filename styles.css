@@ -1,18 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fef8f3;
+    font-family: Arial, sans-serif;
+}
 
-@font-face {
-    font-family: 筑紫;
-    src: url("方正fw筑紫古典l明朝 简.ttf");
+header {
+    background-color: rgb(200, 217, 198);
+    box-shadow: 5px 2px 5px rgba(5, 2, 5, 0.1);
+    width: 100%;
+    position: relative; /* 添加相对定位 */
+    z-index: 10; /* 设置较高的z-index值 */
 }
-@font-face {
-    font-family: 布丁;
-    src: url("华康布丁体简W12.ttc");
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
-@font-face {
-    font-family: 方正粗黑;
-    src: url("方正粗黑宋简体.ttf");
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3a6049;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6b6b;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a6049;
+}
+
+.introduction-section {
+    display: flex;
+    justify-content:flex-end; /* 文本内容靠右 */
+    align-items: center;
+    padding-top: 8%;
+    padding-right: 20%;
+    padding-left: 10%;
+    padding-bottom: 30%;
+    background-color: #fef8f3;
+    margin: px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 1;
+    max-width: 50%; /* 限制文本容器的最大宽度 */
+    margin-left: 20px; /* 文本内容左侧增加间距 */
+}
+
+.text-container p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #3a6049;
+}
+
+.image-container img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
-    body section.自我介绍 {
-      width: 50%; /* 相对于父元素 */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
-  }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .introduction-section {
+        flex-direction:column-reverse;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 80%;
+        
+    }
+
+    .text-container {
+        margin-left: 0;
+        margin-bottom: 20px;
+        max-width: 100%; /* 恢复最大宽度 */
+        
+    }
+
+    .image-container img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container p {
+        font-size: 18px;
+    }
+
+    .image-container img {
+        max-width: 100px;
+    }
+}
